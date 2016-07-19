@@ -20,6 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       let char = "c"
       print(hello.pigLatin)
       print(char.pigLatin)
+      print(hello.points)
+      print(char.points)
       return true
    }
    

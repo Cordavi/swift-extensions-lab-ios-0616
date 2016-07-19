@@ -32,6 +32,18 @@ extension String {
       })
    }
    
+   var points: Int {
+      return convertStringToPoints(self)
+   }
+   
+   func convertStringToPoints(word: String) -> Int {
+      let vowels = "aeiou"
+      let vowelSet = NSCharacterSet(charactersInString: vowels)
+      let consonantsInWord = word.lowercaseString.componentsSeparatedByCharactersInSet(vowelSet).joinWithSeparator("")
+      let vowelInWord = word.lowercaseString.componentsSeparatedByCharactersInSet(vowelSet.invertedSet).joinWithSeparator("")
+      return (consonantsInWord.characters.count * 1) + (vowelInWord.characters.count * 2)
+   }
+   
    func convertToPigLatin(word:String) -> String {
       let firstLetter = word.characters.first
       let currentWord = word
@@ -46,3 +58,4 @@ extension String {
       return ""
    }
 }
+
