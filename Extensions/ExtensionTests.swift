@@ -15,7 +15,7 @@ import Nimble
 class StringExtensions: QuickSpec {
     override func spec() {
         
-        let name = "Joseph Gingle Heimer Schmitt"
+        var name = "Joseph Gingle Heimer Schmitt"
         
         describe("whisper:") {
             
@@ -89,7 +89,7 @@ class IntExtensions: QuickSpec {
         describe("square:") {
             
             it("square function should square itself") {
-                sampleNumber.square()
+                sampleNumber.squared
                 expect(sampleNumber).to(equal(15241383936))
             }
         }

@@ -9,12 +9,12 @@
 import Foundation
 
 extension String {
-   func wispher(string: String) -> String {
-      return string.lowercaseString
+   mutating func whisper() {
+      self = self.lowercaseString
    }
    
-   func shout(string: String) -> String {
-      return string.uppercaseString
+   func shout() -> String {
+      return self.uppercaseString
    }
    
    var pigLatin: String {
@@ -26,7 +26,7 @@ extension String {
       let pigLatinString = words.map({
          "\(convertToPigLatin($0))"
       })
-
+      
       return pigLatinString.reduce("", combine: {
          $0 + String($1) + " "
       })
@@ -56,6 +56,40 @@ extension String {
          return newString
       }
       return ""
+   }
+   
+   var unicornLevel: String {
+      var unicornScore = ""
+      var characterCount = 0
+      while characterCount < self.characters.count {
+         unicornScore += "🦄"
+         characterCount += 1
+      }
+      return unicornScore
+   }
+}
+
+extension Int {
+   
+   mutating func half() {
+      self = self / 2
+   }
+   
+   func isDivisibleBy(divisibleBy: Int) -> Bool {
+      if self % divisibleBy == 0 {
+         return true
+      }
+      return false
+   }
+   
+   var squared: Int {
+      var squaredValue = self
+      squaredValue = squaredValue * squaredValue
+      return squaredValue
+   }
+   
+   mutating func halved() {
+   return self.half()
    }
 }
 

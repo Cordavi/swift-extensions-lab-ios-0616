@@ -16,12 +16,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
    
    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
       // Override point for customization after application launch.
-      let hello = "hello my name is"
-      let char = "c"
-      print(hello.pigLatin)
-      print(char.pigLatin)
-      print(hello.points)
-      print(char.points)
+//      let hello = "hello my name is"
+//      let char = "c"
+//      var number = 10
+//      print(hello.unicornLevel)
+//      print(char.unicornLevel)
+//      print(hello.pigLatin)
+//      print(char.pigLatin)
+//      print(hello.points)
+//      print(char.points)
+//      print(number.half())
       return true
    }
    
